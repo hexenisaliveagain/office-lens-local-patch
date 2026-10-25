@@ -18,7 +18,7 @@ import sys
 import tempfile
 import zipfile
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 ROOT = Path(__file__).resolve().parent
 MAX_DEX_SIZE = 32 * 1024 * 1024
 MAX_CONTROL_SIZE = 8 * 1024 * 1024

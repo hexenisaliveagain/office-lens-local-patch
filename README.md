@@ -8,8 +8,8 @@ and includes the native crash fix validated in FIX1. Microsoft does not endorse 
 
 ## Download
 
-[Download the ready-to-use ZIP (v1.0.0)](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.0.0/Lens-local-patch-1.0.0-source.zip)
-and [its SHA-256 checksum](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.0.0/Lens-local-patch-1.0.0-source.zip.sha256).
+[Download the ready-to-use ZIP (v1.1.0)](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.1.0/Lens-local-patch-1.1.0-source.zip)
+and [its SHA-256 checksum](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.1.0/Lens-local-patch-1.1.0-source.zip.sha256).
 Extract the ZIP and follow the commands below. [All releases](https://github.com/hexenisaliveagain/office-lens-local-patch/releases).
 
 ## Requirements
@@ -25,6 +25,26 @@ c1bb0c9b881b65ff998c572944b6f40c90531fcedc2a2608507c11ed90cdf732
 ```
 
 Other builds, ABIs, split APK sets and previously modified APKs are rejected. The input is never overwritten.
+
+## Windows wizard
+
+Extract the ZIP and double-click **`Start-Windows.cmd`**. Select Polish or English, then:
+
+1. Choose the original APK. Its compatibility is checked before creating a signing key.
+2. Confirm detected JDK / Android SDK Build Tools, or select their locations.
+3. Create a personal PKCS12 key, or select your existing keystore and key alias.
+4. Choose a new output APK filename and enter your keystore password when prompted.
+
+The wizard builds, aligns, signs and verifies the APK. It also supports existing keys with
+separate private-key passwords. Keep a private backup of your key and password for future updates.
+It never installs/uninstalls apps. Cancelling a file dialog exits; any key already created is retained.
+If signing fails after creating a key, keep that key and choose the existing-key option on retry.
+Existing APKs and keys are not overwritten. A Tk file-dialog failure falls back to console path input.
+
+Install Python 3.10+ from [python.org](https://www.python.org/downloads/windows/) (enable **Add Python to PATH**),
+JDK 17+, and Android SDK Build Tools (36.0.0 tested) first. The wizard detects `JAVA_HOME`/`PATH` and
+`%LOCALAPPDATA%/Android/Sdk/build-tools`; tools installed elsewhere can be selected manually.
+Build Tools can be installed through Android Studio's SDK Manager. The wizard does not download dependencies.
 
 ## Apply and sign
 

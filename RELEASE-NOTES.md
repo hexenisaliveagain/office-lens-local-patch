@@ -1,3 +1,23 @@
+# v1.1.0 — Windows wizard / kreator Windows
+
+## Polski
+
+Uruchom `Start-Windows.cmd` po rozpakowaniu ZIP. Kreator PL/EN prowadzi przez wybór APK,
+sprawdzenie zgodności, wybór narzędzi Java/SDK, utworzenie lub wybór własnego klucza oraz
+zapis podpisanego APK. Obsługuje osobne hasło klucza prywatnego. Nie instaluje ani nie usuwa aplikacji.
+Wymaga Python 3.10+, JDK 17+ i Android SDK Build Tools. Instrukcja: `README-PL.md`.
+Łata aplikacji i obsługiwana wersja ARM64 pozostają takie jak w v1.0.0.
+
+## English
+
+Run `Start-Windows.cmd` after extracting the ZIP. The PL/EN wizard guides you through APK
+selection and compatibility checks, Java/SDK selection, creating or choosing your own key,
+and saving a signed APK. Separate private-key passwords are supported. It does not install
+or uninstall apps. Requires Python 3.10+, JDK 17+ and Android SDK Build Tools. See `README.md`.
+The application patch and supported ARM64 build are unchanged from v1.0.0.
+
+---
+
 # v1.0.0 — local patch / lokalna łata
 
 ## Polski

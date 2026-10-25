@@ -8,11 +8,35 @@ własny klucz podpisu. Nie potrzebuje apktool ani dekompilatora. Microsoft nie w
 
 ## Pobierz
 
-[Gotowa paczka ZIP — v1.0.0](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.0.0/Lens-local-patch-1.0.0-source.zip)
-· [Suma SHA-256](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.0.0/Lens-local-patch-1.0.0-source.zip.sha256)
+[Gotowa paczka ZIP — v1.1.0](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.1.0/Lens-local-patch-1.1.0-source.zip)
+· [Suma SHA-256](https://github.com/hexenisaliveagain/office-lens-local-patch/releases/download/v1.1.0/Lens-local-patch-1.1.0-source.zip.sha256)
 · [Wszystkie wydania](https://github.com/hexenisaliveagain/office-lens-local-patch/releases)
 
 Rozpakuj ZIP, otwórz terminal w rozpakowanym katalogu i wykonaj instrukcję poniżej.
+
+## Kreator Windows
+
+Po rozpakowaniu ZIP uruchom **`Start-Windows.cmd`** dwuklikiem i wybierz język polski lub angielski.
+Kreator poprowadzi przez:
+
+1. Wybór oryginalnego APK i kontrolę jego zgodności.
+2. Potwierdzenie wykrytego JDK i Android SDK Build Tools lub wskazanie ich lokalizacji.
+3. Utworzenie własnego klucza PKCS12 albo wybór istniejącego klucza i jego aliasu.
+4. Wybór nowej nazwy wynikowego APK oraz podanie hasła do klucza w monicie.
+
+Wynik zostanie przebudowany, wyrównany, podpisany i zweryfikowany. Kreator obsługuje też istniejące
+klucze z osobnym hasłem klucza prywatnego. Zachowaj klucz i hasło do przyszłych aktualizacji.
+Kreator nie instaluje ani nie odinstalowuje aplikacji. Anulowanie okna kończy pracę; wcześniej utworzony
+klucz pozostaje na dysku. Po błędzie podpisywania zachowaj ten klucz i przy ponowieniu wybierz istniejący.
+Istniejące APK i klucze nie są nadpisywane. Gdy okna wyboru Tk są niedostępne, ścieżkę wpisujesz w konsoli.
+
+Najpierw zainstaluj Python 3.10+ z [python.org](https://www.python.org/downloads/windows/) z opcją
+**Add Python to PATH**, JDK 17+ oraz Android SDK Build Tools (testowane 36.0.0).
+Kreator wykrywa Java przez `JAVA_HOME`/`PATH`, a SDK przez `%LOCALAPPDATA%/Android/Sdk/build-tools`.
+Build Tools zainstalujesz w SDK Managerze Android Studio. Inne lokalizacje można wskazać ręcznie.
+Kreator nie pobiera tych zależności samodzielnie.
+
+## Alternatywa: polecenia ręczne
 
 1. Zainstaluj Python 3.10+; do podpisania także JDK 17+ i Android SDK Build Tools, testowane 36.0.0.
 2. Umieść własny oryginalny APK obok skryptu jako `original.apk`.

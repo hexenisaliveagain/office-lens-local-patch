@@ -1,5 +1,17 @@
 # Release validation
 
+## v1.1.0 Windows wizard
+
+Twelve synthetic tests cover the previous patcher checks and the wizard's rejection of
+incompatible APKs, cancellation, existing/new-key flows and Java version detection.
+The complete existing-key wizard path was exercised on Windows with real APK patching,
+JDK 21 and SDK 36.0.0 signing and verification. Only dialog choices, console choices and
+password entry were supplied by the test harness; patching/signing tools ran normally.
+Native dialog rendering and interactive keytool certificate prompts were not automated.
+The application payload is unchanged from FIX1. The wizard does not install applications.
+
+## v1.0.0 baseline
+
 Validated on Windows with Python 3.12, JDK 21 and Android SDK Build Tools 36.0.0.
 The supplied workflow makes synthetic tests runnable on Linux, macOS and Windows;
 only the local Windows run was executed for this release.
