@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "source_apk": {
+    "sha256": "c1bb0c9b881b65ff998c572944b6f40c90531fcedc2a2608507c11ed90cdf732",
+    "package": "com.microsoft.office.officelens",
+    "version_name": "16.0.19628.20008",
+    "version_code": 2004969699,
+    "architecture": "arm64-v8a"
+  },
+  "dex": {
+    "member": "classes5.dex",
+    "source_sha256": "a7998b650c27fb4585125bb38adafb679aaedf2e05568b04da10f7674816c535",
+    "target_sha256": "4f62140a7d003f31f68577c025f0214818d6e938ad99435ebed5b266bae892bc",
+    "target_size": 11421080,
+    "patch_file": "classes5.bsdiff",
+    "patch_sha256": "bb44b03a2fe93cfe5182c4eb43320baac318e7ccdc5e0ce2de0d4796396276b6"
+  },
+  "native": {
+    "member": "lib/arm64-v8a/libplat.so",
+    "source_sha256": "f4e4aee5483bf9817a7bb99e652858897da06a4d1b0afa4afcc83fe64ea85380",
+    "target_sha256": "481732a88c41e74f9e2a842ec31cbfcbd679c4267ad4faddf28e014b62bb5655",
+    "file_offset": 776828,
+    "before_hex": "1f0100f9",
+    "after_hex": "1f2003d5"
+  }
+}
